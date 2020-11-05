@@ -1,6 +1,7 @@
 package com.spring.app;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.spring.bean.Department;
 import com.spring.bean.Emp;
@@ -8,7 +9,9 @@ import com.spring.bean.Emp;
 public class IOCApp {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("Spring-Bean.xml");
+//		ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("Spring-Bean.xml");
+		FileSystemXmlApplicationContext appCtx = new 
+				FileSystemXmlApplicationContext("D:\\Programs\\JavaPrograms\\RigerSky\\OctJava\\IOCApp\\src\\main\\resources\\Spring-Bean.xml");
 		Emp e1 = (Emp) appCtx.getBean("e2");
 		System.out.println(e1);
 		
