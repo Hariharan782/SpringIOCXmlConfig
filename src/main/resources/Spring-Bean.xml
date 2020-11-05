@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean class="com.spring.bean.Emp" id="e1" scope="prototype">
+		<constructor-arg value="100" />
+		<constructor-arg value="Veena" />
+		<constructor-arg value="New Delhi" />
+	</bean>
+	<bean class="com.spring.bean.Emp" id="e2" scope="prototype">
+		<property name="empName" value="Aditi" />
+		<property name="empNo" value="101" />
+	</bean>
+	
+	<bean class="com.spring.bean.Department" id="d1">
+		<property name="deptName" value="Admin" />
+		<property name="employee" ref="e1" /> <!-- DI -->
+	</bean>
+</beans>
